@@ -30,6 +30,7 @@
               <li><a href="#">October 2016</a></li>
               <li><a href="#">September 2016</a></li>
               <li><a href="#">August 2016</a></li>
+              <li><a href="#">July 2016</a></li>
             </ol>
           </div>
           <div class="sidebar-module">
