@@ -19,21 +19,32 @@
 
   <body>
 
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-          <?php
-wp_nav_menu( array(
+    <!-- https://www.pattonwebz.com/wordpress-custom/bootstrap-wordpress-responsive-menu/ -->
+
+    <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    <a class="navbar-brand" href="#"><?php bloginfo('name'); ?></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <?php
+        wp_nav_menu( array(
     'menu'              => 'primary',
     'theme_location'    => 'primary',
     'depth'             =>  2,
-    'container'         => 'div',
-    'container_class'   => 'collapse navbar-collapse',
-    'container_id'      => 'bs-example-navbar-collapse-1',
+    'container'         => false,
     'menu_class'        => 'nav navbar-nav',
-    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+    'fallback_cb'       => 'wp_page_menu',
     'walker'            => new WP_Bootstrap_Navwalker(),
-) ); ?>
-        </nav>
-      </div>
-    </div>
+));
+        ?>
+    </div><!-- /.navbar-collapse --> 
+</nav>

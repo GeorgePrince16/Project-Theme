@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    <title>Blog Template for Bootstrap</title>
+    <title>Bangor Cricket Club</title>
     <!-- Bootstrap core CSS -->
     <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -25,24 +25,35 @@
 
   <body>
 
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-          <?php
-wp_nav_menu( array(
+    <!-- https://www.pattonwebz.com/wordpress-custom/bootstrap-wordpress-responsive-menu/ -->
+
+    <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    <a class="navbar-brand" href="#"><?php bloginfo('name'); ?></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <?php
+        wp_nav_menu( array(
     'menu'              => 'primary',
     'theme_location'    => 'primary',
     'depth'             =>  2,
-    'container'         => 'div',
-    'container_class'   => 'collapse navbar-collapse',
-    'container_id'      => 'bs-example-navbar-collapse-1',
+    'container'         => false,
     'menu_class'        => 'nav navbar-nav',
-    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+    'fallback_cb'       => 'wp_page_menu',
     'walker'            => new WP_Bootstrap_Navwalker(),
-) ); ?>
-        </nav>
-      </div>
-    </div>
+));
+        ?>
+    </div><!-- /.navbar-collapse --> 
+</nav>
 
 	<section class="showcase">
       <div class="container">
@@ -50,7 +61,7 @@ wp_nav_menu( array(
         <p><?php echo get_theme_mod('showcase_text', 'This is some DUMMY Text which is then followed by some more DUMMY TEXT');?></p>
         <a <?php echo get_theme_mod('btn_url', 'http://www.google.com');?> class="btn btn-primary btn-lg"><?php echo get_theme_mod('btn_text', 'Read More');?></a>
       </div>
-    </section>
+  </section>
 
     <section class="boxes">
       <div class="container">

@@ -221,18 +221,17 @@ h6, .h6 {
   background-color: #ffbe05;
 }
 
-.dropdown-menu {
+#menu-main-menu .select a:select {
+  background-color: #111;
+}
+
+/*.dropdown-menu {
   background-color: #ffbe05;
   color: #fff;
-}
+}*/
 
-.dropdown-menu li:hover {
+.dropdown-menu a:hover {
   background-color: #cc9600;
-}
-
-.blog-nav a:hover  {
-  color: #fff;
-  background: #ffbe05;
 }
 
 .post-thumbnail img {
