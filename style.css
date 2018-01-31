@@ -225,6 +225,10 @@ h6, .h6 {
   background-color: #111;
 }
 
+div.navbar-header img {
+  float: left;
+}
+
 /*.dropdown-menu {
   background-color: #ffbe05;
   color: #fff;

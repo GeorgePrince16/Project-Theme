@@ -27,17 +27,18 @@
 
     <!-- https://www.pattonwebz.com/wordpress-custom/bootstrap-wordpress-responsive-menu/ -->
 
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+      <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-    <a class="navbar-brand" href="#"><?php bloginfo('name'); ?></a>
-    </div>
+        <img src="<?php bloginfo('template_directory'); ?>/img/bcc-logo.png">
+        <a style="color: #001350; background: #fff;" class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+      </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -53,7 +54,7 @@
 ));
         ?>
     </div><!-- /.navbar-collapse --> 
-</nav>
+    </nav>
 
 	<section class="showcase">
       <div class="container">
