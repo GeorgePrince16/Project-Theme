@@ -27,18 +27,18 @@
 
     <!-- https://www.pattonwebz.com/wordpress-custom/bootstrap-wordpress-responsive-menu/ -->
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
+    <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <img src="<?php bloginfo('template_directory'); ?>/img/bcc-logo.png">
-        <a style="color: #001350; background: #fff;" class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-      </div>
+    <img src="<?php bloginfo('template_directory'); ?>/img/bcc-logo.png">
+    <a style="color: #001350; background: #fff;" class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+    </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -53,8 +53,23 @@
     'walker'            => new WP_Bootstrap_Navwalker(),
 ));
         ?>
+    <!-- https://github.com/wp-bootstrap/wp-bootstrap-navwalker/issues/58 -->
+
+    <?php $ph = ""; ?>
+            <form action="<?php echo home_url(); ?>" id="search_form" class="search_wrapper navbar-form navbar-right" method="get">
+                <label class="sr-only" for="s">Search</label>
+                <div class="form-group">
+                    <input type="text" class="search_input" id="s" name="s" autocomplete="off" placeholder="Type here..."
+                        value="<?php echo $ph; ?>"
+                        onfocus="if(this.value=='<?php echo $ph; ?>')this.value='';"
+                        onblur="if(this.value=='')this.value='<?php echo $ph; ?>'"
+                        placeholder="<?php echo $ph; ?>"
+                    />
+                </div>
+                <input type="submit" value="" id="search_submit" class="search_submit button normal" />
+            </form>
     </div><!-- /.navbar-collapse --> 
-    </nav>
+</nav>
 
 	<section class="showcase">
       <div class="container">
@@ -87,6 +102,20 @@
     </section>
 
     <footer class="blog-footer">
+      <!-- https://www.tipsandtricks-hq.com/how-to-add-widgets-to-wordpress-themes-footer-1033-->
+      <div id="footer-sidebar" class="secondary">
+        <div id="footer-sidebar1">
+          <?php if(is_active_sidebar('footer-sidebar-1')){
+            dynamic_sidebar('footer-sidebar-1');
+          } ?>
+          <?php wp_nav_menu( array('theme_location' => 'footer-menu')); ?>
+        </div>
+        <div id="footer-sidebar2">
+          <?php if(is_active_sidebar('footer-sidebar-2')){
+            dynamic_sidebar('footer-sidebar-2');
+          } ?>
+        </div>
+      </div>
       <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> </p>
       <p>
         <a href="#">Back to top</a>

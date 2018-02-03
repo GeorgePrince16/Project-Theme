@@ -47,5 +47,21 @@
     'walker'            => new WP_Bootstrap_Navwalker(),
 ));
         ?>
+
+        <!-- https://github.com/wp-bootstrap/wp-bootstrap-navwalker/issues/58 -->
+
+    <?php $ph = ""; ?>
+            <form action="<?php echo home_url(); ?>" id="search_form" class="search_wrapper navbar-form navbar-right" method="get">
+                <label class="sr-only" for="s">Search</label>
+                <div class="form-group">
+                    <input type="text" class="search_input" id="s" name="s" autocomplete="off" placeholder="Type here..."
+                        value="<?php echo $ph; ?>"
+                        onfocus="if(this.value=='<?php echo $ph; ?>')this.value='';"
+                        onblur="if(this.value=='')this.value='<?php echo $ph; ?>'"
+                        placeholder="<?php echo $ph; ?>"
+                    />
+                </div>
+                <input type="submit" value="" id="search_submit" class="search_submit button normal" />
+            </form>
     </div><!-- /.navbar-collapse --> 
 </nav>
