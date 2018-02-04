@@ -1,13 +1,12 @@
     <footer class="blog-footer">
       <!-- https://www.tipsandtricks-hq.com/how-to-add-widgets-to-wordpress-themes-footer-1033 -->
-      <div id="footer-sidebar">
-        <div class="col-md-8">
+      <div class="row">
+        <div id="footer-menu" class="col-md-6">
           <?php if(is_active_sidebar('footer-sidebar-1')){
             dynamic_sidebar('footer-sidebar-1');
           } ?>
-          <?php wp_nav_menu( array('theme_location' => 'footer-menu')); ?>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <?php if(is_active_sidebar('footer-sidebar-2')){
             dynamic_sidebar('footer-sidebar-2');
           } ?>

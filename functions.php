@@ -75,8 +75,8 @@
       register_sidebar(array (
       'name'          => 'Footer Sidebar 1',
       'id'            => 'footer-sidebar-1',
-      'before_widget' => '<div class="col-md-8">',
-      'after_widget'  => '</div>',
+      'before_widget' => '<aside id="%1$s" class="%2$s">',
+      'after_widget'  => '</aside>',
       'before_title'  => '<h3 class="widget-title">',
       'after_title'   => '</h3>'
     ));
@@ -84,8 +84,8 @@
       register_sidebar(array (
       'name'          => 'Footer Sidebar 2',
       'id'            => 'footer-sidebar-2',
-      'before_widget' => '<div class="col-md-4">',
-      'after_widget'  => '</div>',
+      'before_widget' => '<aside id="%1$s" class="%2$s">',
+      'after_widget'  => '</aside>',
       'before_title'  => '<h3 class="widget-title">',
       'after_title'   => '</h3>'
     ));

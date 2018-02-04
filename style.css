@@ -161,16 +161,6 @@ h6, .h6 {
  * Footer
  */
 
-.blog-footer {
-  padding: 40px 0;
-  color: #999;
-  text-align: center;
-  background: #001350;
-  border-top: 1px solid #e5e5e5;
-}
-.blog-footer p:last-child {
-  margin-bottom: 0;
-}
 .showcase {
   height: 600px;
   padding: 100px 20px;
@@ -310,32 +300,26 @@ footer {
 
 .widget-title {
   background: #001350;
+  color: #cc9600;
 }
-
-#footer-sidebar {
-display:block;
-height: 150px;
+.blog-footer {
+  text-align: center;
+  padding: 40px 0;
+  color: #fff;
 }
-
-#footer-sidebar1 {
-float: left;
-width: 340px;
-margin-left:5px;
-margin-right:5px;
+#footer-menu ul li {
+  list-style-type: none;
+  display: inline;
 }
-
-#footer-sidebar2 {
-float: left;
-width: 340px;
-margin-right:5px;
+#menu-footer ul li {
+  list-style-type: none;
+  display: inline;
+  padding: 10px 5px;
 }
-
-#footer-sidebar3 {
-float: left;
-width: 340px;
+#menu-footer li {
+  text-align: center;
+  color: #cc9600;
 }
-
-
 
 
 

@@ -102,24 +102,21 @@
     </section>
 
     <footer class="blog-footer">
-      <!-- https://www.tipsandtricks-hq.com/how-to-add-widgets-to-wordpress-themes-footer-1033-->
-      <div id="footer-sidebar" class="secondary">
-        <div id="footer-sidebar1">
+      <!-- https://www.tipsandtricks-hq.com/how-to-add-widgets-to-wordpress-themes-footer-1033 -->
+      <div class="row">
+        <div id="footer-menu" class="col-md-6">
           <?php if(is_active_sidebar('footer-sidebar-1')){
             dynamic_sidebar('footer-sidebar-1');
           } ?>
-          <?php wp_nav_menu( array('theme_location' => 'footer-menu')); ?>
         </div>
-        <div id="footer-sidebar2">
+        <div class="col-md-6">
           <?php if(is_active_sidebar('footer-sidebar-2')){
             dynamic_sidebar('footer-sidebar-2');
           } ?>
         </div>
       </div>
-      <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> </p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
+        <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> </p>
+        <p><a href="#">Back to top</a></p>
     </footer>
     <?php wp_footer(); ?>
 
@@ -127,3 +124,4 @@
     <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>
   </body>
 </html>
+
