@@ -1,3 +1,6 @@
+    <head>
+      <script type="text/javascript" src="/scripts/emailpage.js"></script>
+    </head>
     <footer class="blog-footer">
       <!-- https://www.tipsandtricks-hq.com/how-to-add-widgets-to-wordpress-themes-footer-1033 -->
       <div class="row">
@@ -12,8 +15,10 @@
           } ?>
         </div>
       </div>
+      <div>
         <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> </p>
-        <p><a href="#">Back to top</a></p>
+        <p><a id="back-top" href="#">Back to top</a></p>
+      </div>
     </footer>
     <?php wp_footer(); ?>
 

@@ -31,7 +31,7 @@
             <span class="icon-bar"></span>
         </button>
     <img src="<?php bloginfo('template_directory'); ?>/img/bcc-logo.png">
-    <a style="color: #001350; background: #fff;" class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+    <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
