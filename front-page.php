@@ -10,6 +10,7 @@
     <link rel="icon" href="../../favicon.ico">
     <title>Bangor Cricket Club</title>
     <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
@@ -27,7 +28,7 @@
 
     <!-- https://www.pattonwebz.com/wordpress-custom/bootstrap-wordpress-responsive-menu/ -->
 
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -56,17 +57,17 @@
     <!-- https://github.com/wp-bootstrap/wp-bootstrap-navwalker/issues/58 -->
 
     <?php $ph = ""; ?>
-            <form action="<?php echo home_url(); ?>" id="search_form" class="search_wrapper navbar-form navbar-right" method="get">
+            <form action="<?php echo home_url(); ?>" id="search_form" class="navbar-form" method="get">
                 <label class="sr-only" for="s">Search</label>
-                <div class="form-group">
-                    <input type="text" class="search_input" id="s" name="s" autocomplete="off" placeholder="Type here..."
+                <div class="input-group add-on">
+                    <input type="text" class="form-control" id="s" name="s" autocomplete="off" placeholder="Type here..."
                         value="<?php echo $ph; ?>"
                         onfocus="if(this.value=='<?php echo $ph; ?>')this.value='';"
                         onblur="if(this.value=='')this.value='<?php echo $ph; ?>'"
                         placeholder="<?php echo $ph; ?>"
                     />
                 </div>
-                <input type="submit" value="" id="search_submit" class="search_submit button normal" />
+                <button type="submit" value="" id="search_submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Search</button>
             </form>
     </div><!-- /.navbar-collapse --> 
 </nav>
