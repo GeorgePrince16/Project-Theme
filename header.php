@@ -10,7 +10,6 @@
     <link rel="icon" href="../../favicon.ico">
     <title>Bangor Cricket Club</title>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
@@ -22,7 +21,7 @@
 
     <!-- https://www.pattonwebz.com/wordpress-custom/bootstrap-wordpress-responsive-menu/ -->
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -62,7 +61,7 @@
                         placeholder="<?php echo $ph; ?>"
                     />
                 </div>
-                <button type="submit" value="" id="search_submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Search</button>
+                <button type="submit" value="" id="search_submit" class="btn btn-default">Search</button>
             </form>
     </div><!-- /.navbar-collapse --> 
 </nav>

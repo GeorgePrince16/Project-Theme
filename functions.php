@@ -89,6 +89,15 @@
       'before_title'  => '<h3 class="widget-title">',
       'after_title'   => '</h3>'
     ));
+
+      register_sidebar(array (
+      'name'          => 'Sponsors',
+      'id'            => 'sponsors',
+      'before_widget' => '<div id="sponsors" class="%2$s">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h3 class="widget-title" id="sponsors">',
+      'after_title'   => '</h3>'
+    ));
   }
 
   add_action('widgets_init', 'wpb_init_widgets');
