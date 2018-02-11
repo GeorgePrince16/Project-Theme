@@ -4,7 +4,7 @@
 
   // Theme Support
   function wpb_theme_setup() {
-    add_theme_support('post_thumbnails');
+    add_theme_support('post-thumbnails');
     // Nav Menus
     register_nav_menus(array(
       'primary' => __('Primary Menu'),
@@ -95,7 +95,34 @@
       'id'            => 'sponsors',
       'before_widget' => '<div id="sponsors" class="%2$s">',
       'after_widget'  => '</aside>',
-      'before_title'  => '<h3 class="widget-title" id="sponsors">',
+      'before_title'  => '<h1 class="widget-title" id="sponsors">',
+      'after_title'   => '</h1>'
+    ));
+
+      register_sidebar(array (
+      'name'          =>  'News Box1',
+      'id'            =>  'news-box1',
+      'before_widget' => '<div class="box">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h3>',
+      'after_title'   => '</h3>'
+    ));
+
+     register_sidebar(array (
+      'name'          =>  'News Box2',
+      'id'            =>  'news-box2',
+      'before_widget' => '<div class="box">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h3>',
+      'after_title'   => '</h3>'
+    ));
+
+      register_sidebar(array (
+      'name'          =>  'News Box3',
+      'id'            =>  'news-box3',
+      'before_widget' => '<div class="box">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h3>',
       'after_title'   => '</h3>'
     ));
   }
@@ -104,6 +131,85 @@
 
   //Customiser File
   require get_template_directory(). '/inc/customiser.php';
+
+  // https://wp-time.com/recent-posts-with-thumbnails-in-wordpress/
+  function wptime_get_recent_posts($post_id = null, $count = null){
+ 
+    if( !empty($post_id) ){
+        $id = $post_id;
+    } else {
+        $id = '';
+    }
+ 
+    if( empty($count) ){
+        $count = 3; 
+    }
+ 
+    $args = array(
+                'numberposts' => $count,
+                'offset' => 0,
+                'category' => 0, 
+                'orderby' => 'post_date',
+                'order' => 'DESC',
+                'include' => '',
+                'exclude' => $id,
+                'meta_key' => '',
+                'meta_value' =>'',
+                'post_type' => 'post', 
+                'post_status' => 'publish', 
+                'suppress_filters' => true
+            );
+ 
+    $recent_posts = wp_get_recent_posts($args, false);
+ 
+    ob_start();
+ 
+    foreach ($recent_posts as $recent_post) {
+        $post_link = esc_url( get_permalink($recent_post->ID) );
+        $post_title_attr = esc_attr( get_the_title($recent_post->ID) );
+        $post_title = get_the_title($recent_post->ID);
+        $post_excerpt = get_the_excerpt($recent_post->ID);
+ 
+        if( has_post_thumbnail($recent_post->ID) ){ 
+            $thumbnail_id = get_post_thumbnail_id($recent_post->ID);
+            $image_size = 'small'; 
+            $get_thumbnail_url = wp_get_attachment_image_src($thumbnail_id, $image_size);
+            $image = '<img src="'.$get_thumbnail_url[0].'" alt="'.$post_title_attr.'">'; 
+        } else {
+            $image = '<img src="http://example.com/default-image.png" alt="'.$post_title_attr.'">'; 
+        }
+        ?>
+            <div class="col-md-4">
+                <?php echo $image; ?>
+                <h3><a href="<?php echo $post_link; ?>" title="<?php echo $post_title_attr; ?>"><?php echo $post_title; ?></a></h3>
+                <p><?php echo $post_excerpt; ?></p>
+            </div>
+        <?php
+    }
+ 
+    $get_recent_posts = ob_get_clean();
+ 
+    echo $get_recent_posts;
+}
+
+function wptime_recent_posts_shortcode($atts){
+    ob_start();
+ 
+    global $post;
+ 
+    $post_id = $post->ID;
+ 
+    if( !empty($atts['count']) ){
+        $count = $atts['count']; 
+    }else{
+        $count = null;
+    }
+ 
+    wptime_get_recent_posts($post_id, $count);
+ 
+    return ob_get_clean();
+}
+add_shortcode('wptime_recent_posts', 'wptime_recent_posts_shortcode'); 
 
   // http://www.wpbeginner.com/wp-tutorials/how-to-change-the-login-logo-in-wordpress/
 

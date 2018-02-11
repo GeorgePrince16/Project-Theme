@@ -75,7 +75,8 @@
       <div class="container">
         <h1><?php echo get_theme_mod('showcase_heading', 'This is the start of my Theme');?></h1>
         <p><?php echo get_theme_mod('showcase_text', 'This is some DUMMY Text which is then followed by some more DUMMY TEXT');?></p>
-        <a <?php echo get_theme_mod('btn_url', 'http://www.google.com');?> class="btn btn-primary btn-lg"><?php echo get_theme_mod('btn_text', 'Read More');?></a>
+        <a href="/bcc-project/about" <?php echo get_theme_mod('btn_url');?> class="btn btn-primary btn-lg">
+        <?php echo get_theme_mod('btn_text', 'Read More');?></a>
       </div>
   </section>
 
@@ -109,16 +110,14 @@
         </div>
     </section>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <section class="recent-posts-boxes">
+      <div class="container">
+        <h1 id="recent-posts-title">Recent News</h1>
+        <?php
+          echo do_shortcode('[wptime_recent_posts include_excerpt="true"]');
+        ?>
+      </div>
+    </section>
 
     <footer class="blog-footer">
       <!-- https://www.tipsandtricks-hq.com/how-to-add-widgets-to-wordpress-themes-footer-1033 -->
