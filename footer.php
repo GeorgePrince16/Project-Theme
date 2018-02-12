@@ -15,6 +15,7 @@
           } ?>
         </div>
       </div>
+      <br>
       <div>
         <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> </p>
         <p><a id="back-top" href="#">Back to top</a></p>

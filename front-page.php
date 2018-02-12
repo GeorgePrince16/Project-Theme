@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    <title>Bangor Cricket Club</title>
+    <title>Bangor Cricket Club | Upritchard Park, Bangor</title>
     <!-- Bootstrap core CSS -->
     <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -83,6 +83,7 @@
     <section class="boxes">
       <div class="container">
         <div class="row">
+          <h2 id="upcoming-fixtures-title">Upcoming Fixtures</h2>
           <div class="col-md-4">
               <?php if(is_active_sidebar('box1')) : ?>
                 <?php dynamic_sidebar('box1'); ?>
@@ -133,6 +134,7 @@
           } ?>
         </div>
       </div>
+      <br>
         <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?> </p>
         <p><a href="#">Back to top</a></p>
     </footer>

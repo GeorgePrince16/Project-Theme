@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    <title>Bangor Cricket Club</title>
+    <title><?php wp_title(); ?> | <?php bloginfo('name'); ?></title>
     <!-- Bootstrap core CSS -->
     <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
