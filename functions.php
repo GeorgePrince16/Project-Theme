@@ -11,6 +11,9 @@
       'footer-menu' => __('Footer Menu')
     ));
 
+  // Adding jQuery Script
+  wp_enqueue_script( 'script', get_template_directory_uri() . '/script.js', array ( 'jquery' ), true);
+
     //Post Formats
     add_theme_support( 'post-formats', array(
     'gallery',

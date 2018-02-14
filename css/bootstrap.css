@@ -2249,6 +2249,7 @@ pre code {
     margin-left: 0;
   }
 }
+
 table {
   background-color: transparent;
 }
@@ -3642,12 +3643,10 @@ tbody.collapse.in {
     right: auto;
     left: 0;
   }
-}
-.btn-group,
-.btn-group-vertical {
+} 
+.btn-group {
   position: relative;
   display: inline-block;
-  vertical-align: middle;
 }
 .btn-group > .btn,
 .btn-group-vertical > .btn {
