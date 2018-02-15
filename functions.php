@@ -175,7 +175,7 @@
  
         if( has_post_thumbnail($recent_post->ID) ){ 
             $thumbnail_id = get_post_thumbnail_id($recent_post->ID);
-            $image_size = 'small'; 
+            $image_size = 'thumbnail'; 
             $get_thumbnail_url = wp_get_attachment_image_src($thumbnail_id, $image_size);
             $image = '<img src="'.$get_thumbnail_url[0].'" alt="'.$post_title_attr.'">'; 
         } else {

@@ -149,7 +149,6 @@ h6, .h6 {
 }
 .blog-post-title {
   margin-bottom: 5px;
-  font-size: 40px;
 }
 .blog-post-meta {
   margin-bottom: 20px;
@@ -225,8 +224,8 @@ div.navbar-header img {
 }
 
 .post-thumbnail img {
-  width: 100%;
-  height: auto;
+  width: 300px;
+  height: 300px;
   margin-bottom: 5px;
 }
 
@@ -342,6 +341,11 @@ footer {
 #recent-posts-title #upcoming-fixtures-title {
   color: #001350;
 }
+
+<div class="statistics-buttons">
+  <button class="btn btn-default" id="batting-button">VIew the Batting Statistics</button>
+  <button class="btn btn-default" id="bowling-button">VIew the Bowling Statistics</button>
+ </div>
 
 
 
