@@ -120,6 +120,10 @@
       </div>
     </section>
 
+    <div class="back-to-top">
+      <a href="#" class="back-to-top"></a>
+    </div>
+
     <footer class="blog-footer">
       <!-- https://www.tipsandtricks-hq.com/how-to-add-widgets-to-wordpress-themes-footer-1033 -->
       <div class="row">

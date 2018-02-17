@@ -21,6 +21,10 @@
           <p><?php __('No Pages at this time.'); ?></p>
         <?php endif; ?>
 
+        <div class="back-to-top">
+          <a href="#" class="back-to-top"></a>
+        </div>
+
         </div><!-- /.blog-main -->
 
       </div><!-- /.row -->

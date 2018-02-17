@@ -108,6 +108,7 @@ h6, .h6 {
 .blog-main {
   font-size: 18px;
   line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 /* Sidebar modules for boxing content */
@@ -145,7 +146,7 @@ h6, .h6 {
  */
 
 .blog-post {
-  margin-bottom: 60px;
+  margin-top: 30px;
 }
 .blog-post-title {
   margin-bottom: 5px;
@@ -224,8 +225,8 @@ div.navbar-header img {
 }
 
 .post-thumbnail img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   margin-bottom: 5px;
 }
 
@@ -340,13 +341,18 @@ footer {
 }
 #recent-posts-title #upcoming-fixtures-title {
   color: #001350;
+} 
+/* https://premium.wpmudev.org/blog/back-to-top-button-wordpress/ */
+.back-to-top {
+  height:50px;
+  width:50px;
+  position:fixed;
+  right:5px;
+  bottom:5px;
+  z-index:1;
+  background-image: url("http://localhost/bcc-project/wp-content/uploads/2018/02/back-to-top.png");
+  background-repeat:no-repeat;
 }
-
-<div class="statistics-buttons">
-  <button class="btn btn-default" id="batting-button">VIew the Batting Statistics</button>
-  <button class="btn btn-default" id="bowling-button">VIew the Bowling Statistics</button>
- </div>
-
 
 
 

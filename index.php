@@ -19,5 +19,8 @@
       </div><!-- /.row -->
 
     </div><!-- /.container -->
+    <div class="back-to-top">
+      <a href="#" class="back-to-top"></a>
+    </div>
 
 <?php get_footer(); ?>
