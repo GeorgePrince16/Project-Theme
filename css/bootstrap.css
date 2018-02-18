@@ -1088,13 +1088,32 @@ body {
   color: #333;
   background-color: #fff;
 }
-input,
+input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border-radius: 3px 3px 3px 3px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #001350;
+}
+input:focus {
+  border-color: #cc9600;
+}
 button,
 select,
 textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  border-radius: 3px 3px 3px 3px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #001350;
+}
+textarea:focus {
+  border-width: 1px;
+  border-color: #cc9600;
 }
 a {
   color: #337ab7;

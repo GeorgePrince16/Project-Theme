@@ -108,10 +108,13 @@ h6, .h6 {
 .blog-main {
   font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 /* Sidebar modules for boxing content */
+.blog-sidebar {
+  margin-top: 30px;
+}
 .sidebar-module {
   padding: 15px;
   margin: 0 -15px 15px;
@@ -231,10 +234,14 @@ div.navbar-header img {
 }
 
 .comments {
-  border: 1px #ccc solid;
   padding: 10px;
   margin-bottom: 20px;
   margin-top: 10px;
+  list-style-type: none;
+}
+
+.comment ul {
+  list-style-type: none;
 }
 
 .comments h2, h3 {
@@ -243,28 +250,38 @@ div.navbar-header img {
 }
 
 .comment body {
+  background: #fff;
   border: #ccc solid 1px;
   margin-bottom: 10px;
   padding: 20px 10px;
 }
 
-.comment meta {
-  background: #428bca;
-  color: #fff;
+.comment-meta {
+  background: #fff ;
+  color: #333;
   padding: 10px;
   overflow: auto;
 }
-
-.comment meta img {
-  float: left;
-  margin-right: 10px;
+.comment-form-url {
+  display: none;
 }
-
 .comment-reply-link {
-  background: #428bca;
   color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  border-radius: 3px;
   display: inline block;
   padding: 10px 15px;
+  text-decoration: none;
+}
+.comment-reply-link:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+  text-decoration: none;
+}
+#comment textarea {
+  border-radius: 3px;
 }
 .content-form input, .content-form textarea {
   width: 100%;
@@ -272,7 +289,20 @@ div.navbar-header img {
   border: #ccc solid 1px;
   margin-bottom: 15px;
 }
-
+#comment textarea {
+  cols: ;
+  height: 125px;
+}
+.form-submit > input {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.form-submit > input:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
 .post-gallery {
   background: #333;
   color: #fff;
