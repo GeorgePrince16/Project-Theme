@@ -89,7 +89,7 @@ table fixtures-body tr:hover {
                   <div class="panel panel-default">
                     <div class="panel-heading">
                       <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 1</a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Challenge Cup</a>
                       </h4>
                     </div>
                     <div id="collapse2" class="panel-collapse collapse">
@@ -136,11 +136,11 @@ table fixtures-body tr:hover {
                   <div class="panel panel-default">
                     <div class="panel-heading">
                       <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 2</a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">T20 Cup</a>
                       </h4>
                     </div>
                     <div id="collapse3" class="panel-collapse collapse">
-                      <div class="panel-body"><div class="panel-body">
+                      <div class="panel-body">
                         <table class="fixtures">
                           <tbody class="fixtures-body">
                             <tr id="fixtures-head">
@@ -180,8 +180,161 @@ table fixtures-body tr:hover {
                       </div>
                     </div>
                   </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Section 1 League Table</a>
+                      </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <table class="fixtures">
+                          <tbody class="fixtures-body">
+                            <tr id="fixtures-head">
+                              <td></td>
+                              <td>P</td>
+                              <td>W</td>
+                              <td>L</td>
+                              <td>D</td>
+                              <td>NR/V</td>
+                              <td>Pts</td>
+                              <td>NRR</td>
+                            </tr>
+                            <tr>
+                              <td>Bangor</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                            </tr>
+                            <tr>
+                              <td>Cregagh</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                            </tr>
+                            <tr>
+                              <td>Derriaghy</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                            </tr>
+                            <tr>
+                              <td>Donaghcloney Mill</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                            </tr>
+                            <tr>
+                              <td>Downpatrick</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                            </tr>
+                            <tr>
+                              <td>Holywood</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                            </tr>
+                            <tr>
+                              <td>Laurelvale</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                            </tr>
+                            <tr>
+                              <td>Lisburn</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                            </tr>
+                            <tr>
+                              <td>Lurgan</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                            </tr>
+                            <tr>
+                              <td>Woodvale</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+
+              <!-- Ouputting value referenced from https://stackoverflow.com/questions/45734613/how-to-display-custom-meta-box-value-in-single-post-in-wordpress -->
+
+              <table class="fixtures">
+                <tbody class="fixtures-body">
+                  <tr id="fixtures-head">
+                    <td>Team</td>
+                    <td>P</td>
+                    <td>W</td>
+                    <td>L</td>
+                    <td>D</td>
+                    <td>NR/V</td>
+                    <td>Pts</td>
+                    <td>NRR</td>
+                  </tr>
+                  <tr>
+                    <td><?php $row_1_team = get_post_meta($post->ID, 'row-1-team', true); echo $row_1_team;?></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+            </table>
+
                 <div class="back-to-top">
                   <a href="#" class="back-to-top"></a>
                 </div>
@@ -191,5 +344,6 @@ table fixtures-body tr:hover {
             </div><!-- /.row -->
 
           </div><!-- /.container -->
+
 
 <?php get_footer(); ?>

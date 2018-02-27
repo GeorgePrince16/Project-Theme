@@ -14,7 +14,7 @@
   // Adding jQuery Script
   wp_enqueue_script( 'script', get_template_directory_uri() . '/script.js', array ( 'jquery' ), true);
   wp_enqueue_script( 'script', get_template_directory_uri() . '/backToTop.js', array ( 'jquery' ), true);
-  wp_enqueue_script( 'script', get_template_directory_uri() . '/firstTeamFixtures.js', array ( 'jquery' ), true);
+  wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/firstTeamFixtures.js', array ( 'jquery' ), true);
 
     //Post Formats
     add_theme_support( 'post-formats', array(
@@ -40,14 +40,6 @@
   add_filter('excerpt_length', 'set_excerpt_length');
 
   function wpb_init_widgets($id) {
-   /*register_sidebar(array(
-    'name'  => 'Sidebar',
-    'id'    => 'sidebar',
-    'before_widget' => '<div class="sidebar-module">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h4>',
-    'after_title'   => '</h4>'
-  ));*/
 
     register_sidebar(array (
       'name'          =>  'Box1',
@@ -181,7 +173,7 @@
             $get_thumbnail_url = wp_get_attachment_image_src($thumbnail_id, $image_size);
             $image = '<img src="'.$get_thumbnail_url[0].'" alt="'.$post_title_attr.'">'; 
         } else {
-            $image = '<img src="http://example.com/default-image.png" alt="'.$post_title_attr.'">'; 
+            $image = '<img src="http://localhost/bcc-project/wp-content/uploads/2018/02/Untitled.png" alt="'.$post_title_attr.'">'; 
         }
         ?>
             <div class="col-md-4">
@@ -224,3 +216,4 @@ add_shortcode('wptime_recent_posts', 'wptime_recent_posts_shortcode');
       </style>';
     }
   add_action('login_head', 'custom_loginlogo');
+
