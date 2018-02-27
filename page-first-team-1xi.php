@@ -317,20 +317,20 @@ table fixtures-body tr:hover {
                     <td>P</td>
                     <td>W</td>
                     <td>L</td>
-                    <td>D</td>
+                    <td>T</td>
                     <td>NR/V</td>
                     <td>Pts</td>
                     <td>NRR</td>
                   </tr>
                   <tr>
                     <td><?php $row_1_team = get_post_meta($post->ID, 'row-1-team', true); echo $row_1_team;?></td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td><?php $row_1_played = get_post_meta($post->ID, 'row-1-played', true); echo $row_1_played;?></td>
+                    <td><?php $row_1_won = get_post_meta($post->ID, 'row-1-won', true); echo $row_1_won;?></td>
+                    <td><?php $row_1_lost = get_post_meta($post->ID, 'row-1-lost', true); echo $row_1_lost;?></td>
+                    <td><?php $row_1_tie = get_post_meta($post->ID, 'row-1-tie', true); echo $row_1_tie;?></td>
+                    <td><?php $row_1_nr = get_post_meta($post->ID, 'row-1-nr', true); echo $row_1_nr;?></td>
+                    <td><?php $row_1_points = get_post_meta($post->ID, 'row-1-points', true); echo $row_1_points;?></td>
+                    <td><?php $row_1_run_rate = get_post_meta($post->ID, 'row-1-run-rate', true); echo $row_1_run_rate;?></td>
                   </tr>
                 </tbody>
             </table>
