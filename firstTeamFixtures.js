@@ -1,35 +1,28 @@
-/*Functionality to read in the top headlines for General category in the tabs*/
-$(document).ready(function() 
-		{
-		updateNews();
-		function updateNews(type)
-		/*AJAX call*/
-		{  
-			$.ajax(
-			{
-				type: "GET",
-				dataType: "json",
-				cache: false,
-				url: "http://localhost/bcc-project/wp-json/wp/v2/posts/366",
-				success: readData,
-				error: displayError
-			})
-		}
+/*
 
-		function readData(data)
-	    {
-			/*Loop through url obtaining data from url, title & description*/
-		    for (var i = 0; i < 10; i++)
-		    {
-				/*Append to relevant tab*/
-				$("#first-team-league").append("<p>" + posts.Data[i].content.rendered + "</p>");
-			}
-		    console.log(data);
-	    }
-		
-		/*Error Handling*/
-		function displayError(request, status, error) 
-			{
-				alert(request.responseText);
-			}
-		});
+// Assumes that you're using jQuery and Bootstrap
+// The `ajaxurl` variable, should be declared in 
+// header.php like so:
+// ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+
+var $button = $('#fixture-button');
+var $modal = $('#fixture-modal');
+var $modal_target = $('#fixture-modal_target');
+
+$button.click(function() {
+
+  var id = $(this).data('id');
+
+  $.ajax({
+    url: ajaxurl,
+    data: {
+      'action' : 'fetch_modal_content',
+      'id' : id
+      },
+    success:function(data) {
+      $modal_target.html(data);
+      $modal.modal('show');
+    }
+  });
+
+}); */

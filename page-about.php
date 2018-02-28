@@ -14,31 +14,9 @@
 			<p>Our Youth Section is thriving and can offer cricket for all ages ranging from U11 through to U17. Please see the Youth Section of the site for details. We are always looking for new members, so if interested please get in touch or come along and introduce yourself. Training Nights are Tuesday and Thursday - there will always be someone about who can help.</p>
 
 			<h2>Former International Players</h2>
-
-<style>
-table {
-color: #cc9600;
-width: 100%;
-}
-tr#internationals-head {
-  background: #001350;
-}
-tr td {
-text-align: left;
-padding: 0px 15px;
-font-size: 15px;
-}
-table .internationals-table tr:nth-child(even) {
-    background-color: #fff;
-}
-table .internationals-table tr:nth-child(odd) {
-    background-color: #e6e6e6;
-}
-</style>
-
-			<table class="internationals">
+			<table class="internationals" style="color: #cc9600; width: 100%;">
 				<tbody class="internationals-table">
-					<tr id="internationals-head">
+					<tr id="internationals-head" style="background: #001350;">
 						<td>Name</td>
 						<td>No of Caps</td>
 						<td>First Cap</td>
@@ -89,31 +67,10 @@ table .internationals-table tr:nth-child(odd) {
 				</tbody>
 			</table>
 
-	<h2>Club Membership</h2>
-<style>
-table {
-color: #cc9600;
-width: 100%;
-}
-tr#membership-head {
-  background: #001350;
-}
-tr td {
-text-align: left;
-padding: 0px 15px;
-font-size: 15px;
-}
-table .membership-table tr:nth-child(even) {
-    background-color: #fff;
-}
-table .membership-table tr:nth-child(odd) {
-    background-color: #e6e6e6;
-}
-</style>
-
-			<table class="membership">
+			<h2>Club Membership</h2>
+			<table class="membership" style="color: #cc9600; width: 100%;">
 				<tbody class="membership-table">
-					<tr id="membership-head">
+					<tr id="membership-head" style="background: #001350;">
 						<td>Membership Category</td>
 						<td>Subscription Price</td>
 					</tr>
@@ -162,9 +119,9 @@ table .membership-table tr:nth-child(odd) {
 			
 			<p>The following additional Cricket Section levy is added to some of the membership categories to help cover the extra costs of running the section.</p>
 
-			<table class="membership">
+			<table class="membership" style="color: #cc9600; width: 100%;">
 				<tbody class="membership-table">
-					<tr id="membership-head">
+					<tr id="membership-head" style="background: #001350;">
 						<td>Additional Levy applied to Subscription</td>
 						<td>Amount</td>
 					</tr>
@@ -187,7 +144,7 @@ table .membership-table tr:nth-child(odd) {
 				</tbody>
 			</table>
 			<br>
-			<blockquote>Subscriptions become due and payable on 1st May and <b>MUST</b> be paid to the Membership Secretary on or before 1st July.<br> Discounted rates are available up to 1st June for those who pay by Direct Debit.<br> All members of the Cricket Section whose subscription has not been paid on or before 1st July shall cease to be entitled to the privileges of membership.<br> Please notify the Membership Secretary immediately if you change your address or wish to change your category of membership.</blockquote>
+			<blockquote>Subscriptions become due and payable on 1st May and <b>MUST</b> be paid to the Membership Secretary on or before 1st July.<br><br> Discounted rates are available up to 1st June for those who pay by Direct Debit.<br><br> All members of the Cricket Section whose subscription has not been paid on or before 1st July shall cease to be entitled to the privileges of membership.<br><br> Please notify the Membership Secretary immediately if you change your address or wish to change your category of membership.</blockquote>
 
 			<p>Membership forms using Direct Debit are available <a style="text-decoration: none; color: #001350;" href="http://localhost/bcc-project/wp-content/uploads/2018/02/MembershipForm.pdf" target="_blank" rel="noopener">here</a>.</p>
 

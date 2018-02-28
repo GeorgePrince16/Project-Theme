@@ -1,52 +1,3 @@
-<style>
-table {
-color: #cc9600;
-}
-tr#batting-head {
-  background: #001350;
-}
-tr td {
-text-align: left;
-padding: 0px 15px;
-font-size: 15px;
-}
-table .batting-table tr:nth-child(even) {
-    background-color: #fff;
-}
-table .batting-table tr:nth-child(odd) {
-    background-color: #e6e6e6;
-}
-table .batting-table tr:hover {
-    background-color: #001350;
-}
-table {
-color: #cc9600;
-}
-tr#bowling-head {
-  background: #001350;
-}
-tr td {
-text-align: left;
-padding: 0px 15px;
-font-size: 15px;
-}
-table .bowling-table tr:nth-child(even) {
-    background-color: #fff;
-}
-table .bowling-table tr:nth-child(odd) {
-    background-color: #e6e6e6;
-}
-table .bowling-table tr:hover {
-    background-color: #001350;
-}
-.statistics-buttons {
-display:inline-block;
-}
-#batting-button {
-margin-bottom: 5px;
-}
-</style>
-
 <?php get_header(); ?>
 
   <div class="container">
@@ -68,9 +19,9 @@ margin-bottom: 5px;
           <h2 style="float:left;" id="bowling-title">2017 Bowling Statistics</h2>
           <br>
           <h2 id="batting-title">2017 Batting Statistics</h2>
-          <table class="batting">
+          <table class="batting" style="color: #cc9600;">
             <tbody class="batting-table">
-              <tr id="batting-head">
+              <tr id="batting-head" style="background: #001350;">
                 <td>Name</td>
                 <td>1st XI</td>
                 <td>2nd XI</td>
@@ -954,9 +905,9 @@ margin-bottom: 5px;
               </tr>
             </tbody>
           </table>
-          <table class="bowling">
+          <table class="bowling" style="color: #cc9600;">
             <tbody class="bowling-table">
-              <tr id="bowling-head">
+              <tr id="bowling-head" style="background: #001350;">
                 <td>Name</td>
                 <td>1st XI</td>
                 <td>2nd XI</td>

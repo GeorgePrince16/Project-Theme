@@ -180,6 +180,11 @@ h6, .h6 {
   font-size: 20px;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 600px) {
+    .showcase p {
+      display: none;
+    }
+}
 .boxes {
   text-align: center;
   background: #fff;
@@ -217,11 +222,6 @@ h6, .h6 {
 div.navbar-header img {
   float: left;
 }
-
-/*.dropdown-menu {
-  background-color: #ffbe05;
-  color: #fff;
-}*/
 
 .dropdown-menu a:hover {
   background-color: #cc9600;
@@ -383,6 +383,9 @@ footer {
   background-image: url("http://localhost/bcc-project/wp-content/uploads/2018/02/back-to-top.png");
   background-repeat:no-repeat;
 }
+
+/* 404 Page */
+
 #image-404 {
   width: 50%;
   height: 50%;
@@ -401,6 +404,73 @@ footer {
     }
 }
 
+/* League Tables */
+
+table .fixtures-body tr:nth-child(even) {
+    background-color: #fff;
+}
+table .fixtures-body tr:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+table .fixtures-body tr:hover {
+    background-color: #001350;
+}
+table .league-table-body tr:nth-child(even) {
+    background-color: #fff;
+}
+table .league-table-body tr:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+table .league-table-body tr:hover {
+    background-color: #001350;
+}
+.statistics-buttons {
+display:inline-block;
+}
+#batting-button {
+margin-bottom: 5px;
+}
+
+/* Statistics Tables */
+
+table .batting-table tr:nth-child(even) {
+    background-color: #fff;
+}
+table .batting-table tr:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+table .batting-table tr:hover {
+    background-color: #001350;
+}
+table .bowling-table tr:nth-child(even) {
+    background-color: #fff;
+}
+table .bowling-table tr:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+table .bowling-table tr:hover {
+    background-color: #001350;
+}
+
+/* Other Tables */
+
+table .membership-table tr:nth-child(even) {
+    background-color: #fff;
+}
+table .membership-table tr:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+table .internationals-table tr:nth-child(even) {
+    background-color: #fff;
+}
+table .internationals-table tr:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+tr td {
+    text-align: left;
+    padding: 0px 15px;
+    font-size: 15px;
+}
 
 
 
