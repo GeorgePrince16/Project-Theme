@@ -452,6 +452,19 @@ table .bowling-table tr:hover {
     background-color: #001350;
 }
 
+/* Live Score */
+
+table .first-live-score-body tr:nth-child(even) {
+    background-color: #fff;
+}
+table .first-live-score-body tr:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+
+div #batting-second, #bowling-second {
+  margin-top: 20px;
+}
+
 /* Other Tables */
 
 table .membership-table tr:nth-child(even) {
