@@ -3,6 +3,10 @@
 <?php
 	$total_1 = 0;
 	$wickets_total_1 = 0;
+	$overs_total_1 = 0;
+	$total_2 = 0;
+	$wickets_total_2 = 0;
+	$overs_total_2 = 0;
 ?> 
 
 	<div class="container">
@@ -15,29 +19,47 @@
             </div><!-- /.blog-post -->
 
             <div class="row">
-	            <h3 class="live-score-title"><?php $row_1_score_1 = get_post_meta($post->ID, '1-row-1-score', true);?> 
-	            	<?php $row_2_score_1 = get_post_meta($post->ID, '1-row-2-score', true); ?>
-	            	<?php $row_3_score_1 = get_post_meta($post->ID, '1-row-3-score', true); ?>
-	            	<?php $row_4_score_1 = get_post_meta($post->ID, '1-row-4-score', true); ?>
-	            	<?php $row_5_score_1 = get_post_meta($post->ID, '1-row-5-score', true); ?>
-	            	<?php $row_6_score_1 = get_post_meta($post->ID, '1-row-6-score', true); ?>
-	            	<?php $row_7_score_1 = get_post_meta($post->ID, '1-row-7-score', true); ?>
-	            	<?php $row_8_score_1 = get_post_meta($post->ID, '1-row-8-score', true); ?>
-	            	<?php $row_9_score_1 = get_post_meta($post->ID, '1-row-9-score', true); ?>
-	            	<?php $row_10_score_1 = get_post_meta($post->ID, '1-row-10-score', true); ?>
-	            	<?php $row_11_score_1 = get_post_meta($post->ID, '1-row-11-score', true); ?>
-	            	<?php $extras_1 = get_post_meta($post->ID, '1-extras', true); ?> 
-	            	<?php print ($total_1 = $row_1_score_1 + $row_2_score_1 + $row_3_score_1 + $row_4_score_1 + $row_5_score_1 + $row_6_score_1 + $row_7_score_1 + $row_8_score_1 + $row_9_score_1 + $row_10_score_1 + $row_11_score_1 + $extras_1); ?>
-	            	-
-	        		<?php $row_1_bowl_wickets_1 = get_post_meta($post->ID, '1-row-1-bowl-wickets', true); ?>
-	        		<?php $row_2_bowl_wickets_1 = get_post_meta($post->ID, '1-row-2-bowl-wickets', true); ?>
-	        		<?php $row_3_bowl_wickets_1 = get_post_meta($post->ID, '1-row-3-bowl-wickets', true); ?>
-	        		<?php $row_4_bowl_wickets_1 = get_post_meta($post->ID, '1-row-4-bowl-wickets', true); ?>
-	        		<?php $row_5_bowl_wickets_1 = get_post_meta($post->ID, '1-row-5-bowl-wickets', true); ?>
-	        		<?php $row_6_bowl_wickets_1 = get_post_meta($post->ID, '1-row-6-bowl-wickets', true); ?>
-	        		<?php $row_7_bowl_wickets_1 = get_post_meta($post->ID, '1-row-7-bowl-wickets', true); ?>
-	        		<?php print ($wickets_total_1 = $row_1_bowl_wickets_1 + $row_2_bowl_wickets_1 + $row_3_bowl_wickets_1 + $row_4_bowl_wickets_1 + $row_5_bowl_wickets_1 + $row_6_bowl_wickets_1 + $row_7_bowl_wickets_1) ?>
-	        		</h3>
+            	<table>
+            	<tr id="display-live-score">
+		            <td><h3 class="live-score-title"><?php $team_name_1 = get_post_meta($post->ID, '1-team-name', true); echo $team_name_1;?>
+		            	<?php $row_1_score_1 = get_post_meta($post->ID, '1-row-1-score', true);?> 
+		            	<?php $row_2_score_1 = get_post_meta($post->ID, '1-row-2-score', true); ?>
+		            	<?php $row_3_score_1 = get_post_meta($post->ID, '1-row-3-score', true); ?>
+		            	<?php $row_4_score_1 = get_post_meta($post->ID, '1-row-4-score', true); ?>
+		            	<?php $row_5_score_1 = get_post_meta($post->ID, '1-row-5-score', true); ?>
+		            	<?php $row_6_score_1 = get_post_meta($post->ID, '1-row-6-score', true); ?>
+		            	<?php $row_7_score_1 = get_post_meta($post->ID, '1-row-7-score', true); ?>
+		            	<?php $row_8_score_1 = get_post_meta($post->ID, '1-row-8-score', true); ?>
+		            	<?php $row_9_score_1 = get_post_meta($post->ID, '1-row-9-score', true); ?>
+		            	<?php $row_10_score_1 = get_post_meta($post->ID, '1-row-10-score', true); ?>
+		            	<?php $row_11_score_1 = get_post_meta($post->ID, '1-row-11-score', true); ?>
+		            	<?php $extras_1 = get_post_meta($post->ID, '1-extras', true); ?> 
+		            	<?php print ($total_1 = $row_1_score_1 + $row_2_score_1 + $row_3_score_1 + $row_4_score_1 + $row_5_score_1 + $row_6_score_1 + $row_7_score_1 + $row_8_score_1 + $row_9_score_1 + $row_10_score_1 + $row_11_score_1 + $extras_1); ?>
+		            	-
+		        		<?php $row_1_bowl_wickets_1 = get_post_meta($post->ID, '1-row-1-bowl-wickets', true); ?>
+		        		<?php $row_2_bowl_wickets_1 = get_post_meta($post->ID, '1-row-2-bowl-wickets', true); ?>
+		        		<?php $row_3_bowl_wickets_1 = get_post_meta($post->ID, '1-row-3-bowl-wickets', true); ?>
+		        		<?php $row_4_bowl_wickets_1 = get_post_meta($post->ID, '1-row-4-bowl-wickets', true); ?>
+		        		<?php $row_5_bowl_wickets_1 = get_post_meta($post->ID, '1-row-5-bowl-wickets', true); ?>
+		        		<?php $row_6_bowl_wickets_1 = get_post_meta($post->ID, '1-row-6-bowl-wickets', true); ?>
+		        		<?php $row_7_bowl_wickets_1 = get_post_meta($post->ID, '1-row-7-bowl-wickets', true); ?>
+		        		<?php print ($wickets_total_1 = $row_1_bowl_wickets_1 + $row_2_bowl_wickets_1 + $row_3_bowl_wickets_1 + $row_4_bowl_wickets_1 + $row_5_bowl_wickets_1 + $row_6_bowl_wickets_1 + $row_7_bowl_wickets_1) ?>
+		        	</h3></td>
+		        	<td><h5 class="live-score-title">Overs 
+		        		<?php $row_1_bowl_overs_1 = get_post_meta($post->ID, '1-row-1-bowl-overs', true);?> 
+		            	<?php $row_2_bowl_overs_1 = get_post_meta($post->ID, '1-row-2-bowl-overs', true); ?>
+		            	<?php $row_3_bowl_overs_1 = get_post_meta($post->ID, '1-row-3-bowl-overs', true); ?>
+		            	<?php $row_4_bowl_overs_1 = get_post_meta($post->ID, '1-row-4-bowl-overs', true); ?>
+		            	<?php $row_5_bowl_overs_1 = get_post_meta($post->ID, '1-row-5-bowl-overs', true); ?>
+		            	<?php $row_6_bowl_overs_1 = get_post_meta($post->ID, '1-row-6-bowl-overs', true); ?>
+		            	<?php $row_7_bowl_overs_1 = get_post_meta($post->ID, '1-row-7-bowl-overs', true); ?>
+		            	<?php print ($overs_total_1 = $row_1_bowl_overs_1 + $row_2_bowl_overs_1 + $row_3_bowl_overs_1 + $row_4_bowl_overs_1 + $row_5_bowl_overs_1 + $row_6_bowl_overs_1 + $row_7_bowl_overs_1) ?>
+		        	</h5></td>
+		        	<td><h5 class="live-score-title"> 
+		        		<?php $match_type = get_post_meta($post->ID, 'match-type', true); echo $match_type;?> 
+		        	</h5></td>
+		        </tr>
+		    	</table>
 				<div class="col-md-6">
 					<h5><b>Batting</b></h5>
 					<table class="live-score-table" style="width: 100%; color: #cc9600;">
@@ -167,7 +189,44 @@
 			</div>
 
 			<div class="row">
-				<h3 class="live-score-title">Holywood 123-7</h3>
+				<table>
+            	<tr id="display-live-score">
+		            <td><h3 class="live-score-title"><?php $team_name_2 = get_post_meta($post->ID, '2-team-name', true); echo $team_name_2;?>
+		            	<?php $row_1_score_2 = get_post_meta($post->ID, '2-row-1-score', true);?> 
+		            	<?php $row_2_score_2 = get_post_meta($post->ID, '2-row-2-score', true); ?>
+		            	<?php $row_3_score_2 = get_post_meta($post->ID, '2-row-3-score', true); ?>
+		            	<?php $row_4_score_2 = get_post_meta($post->ID, '2-row-4-score', true); ?>
+		            	<?php $row_5_score_2 = get_post_meta($post->ID, '2-row-5-score', true); ?>
+		            	<?php $row_6_score_2 = get_post_meta($post->ID, '2-row-6-score', true); ?>
+		            	<?php $row_7_score_2 = get_post_meta($post->ID, '2-row-7-score', true); ?>
+		            	<?php $row_8_score_2 = get_post_meta($post->ID, '2-row-8-score', true); ?>
+		            	<?php $row_9_score_2 = get_post_meta($post->ID, '2-row-9-score', true); ?>
+		            	<?php $row_10_score_2 = get_post_meta($post->ID, '2-row-10-score', true); ?>
+		            	<?php $row_11_score_2 = get_post_meta($post->ID, '2-row-11-score', true); ?>
+		            	<?php $extras_2 = get_post_meta($post->ID, '2-extras', true); ?> 
+		            	<?php print ($total_2 = $row_1_score_2 + $row_2_score_2 + $row_3_score_2 + $row_4_score_2 + $row_5_score_2 + $row_6_score_2 + $row_7_score_2 + $row_8_score_2 + $row_9_score_2 + $row_10_score_2 + $row_11_score_2 + $extras_2); ?>
+		            	-
+		        		<?php $row_1_bowl_wickets_2 = get_post_meta($post->ID, '2-row-1-bowl-wickets', true); ?>
+		        		<?php $row_2_bowl_wickets_2 = get_post_meta($post->ID, '2-row-2-bowl-wickets', true); ?>
+		        		<?php $row_3_bowl_wickets_2 = get_post_meta($post->ID, '2-row-3-bowl-wickets', true); ?>
+		        		<?php $row_4_bowl_wickets_2 = get_post_meta($post->ID, '2-row-4-bowl-wickets', true); ?>
+		        		<?php $row_5_bowl_wickets_2 = get_post_meta($post->ID, '2-row-5-bowl-wickets', true); ?>
+		        		<?php $row_6_bowl_wickets_2 = get_post_meta($post->ID, '2-row-6-bowl-wickets', true); ?>
+		        		<?php $row_7_bowl_wickets_2 = get_post_meta($post->ID, '2-row-7-bowl-wickets', true); ?>
+		        		<?php print ($wickets_total_2 = $row_1_bowl_wickets_2 + $row_2_bowl_wickets_2 + $row_3_bowl_wickets_2 + $row_4_bowl_wickets_2 + $row_5_bowl_wickets_2 + $row_6_bowl_wickets_2 + $row_7_bowl_wickets_2) ?>
+		        	</h3></td>
+		        	<td><h5 class="live-score-title">Overs 
+		        		<?php $row_1_bowl_overs_2 = get_post_meta($post->ID, '2-row-1-bowl-overs', true);?> 
+		            	<?php $row_2_bowl_overs_2 = get_post_meta($post->ID, '2-row-2-bowl-overs', true); ?>
+		            	<?php $row_3_bowl_overs_2 = get_post_meta($post->ID, '2-row-3-bowl-overs', true); ?>
+		            	<?php $row_4_bowl_overs_2 = get_post_meta($post->ID, '2-row-4-bowl-overs', true); ?>
+		            	<?php $row_5_bowl_overs_2 = get_post_meta($post->ID, '2-row-5-bowl-overs', true); ?>
+		            	<?php $row_6_bowl_overs_2 = get_post_meta($post->ID, '2-row-6-bowl-overs', true); ?>
+		            	<?php $row_7_bowl_overs_2 = get_post_meta($post->ID, '2-row-7-bowl-overs', true); ?>
+		            	<?php print ($overs_total_2 = $row_1_bowl_overs_2 + $row_2_bowl_overs_2 + $row_3_bowl_overs_2 + $row_4_bowl_overs_2 + $row_5_bowl_overs_2 + $row_6_bowl_overs_2 + $row_7_bowl_overs_2) ?>
+		        	</h5></td>
+		        </tr>
+		    	</table>
 				<div id="batting-second" class="col-md-6">
 					<h5><b>Batting</b></h5>
 					<table class="live-score-table" style="width: 100%; color: #cc9600;">
@@ -294,6 +353,10 @@
 	                	</tbody>
 	                </table>
 	            </div>
+	        </div>
+	        <div class="row">
+	        	<h3>Match Updates & Result</h3>
+	          	<p style="padding-left: 15px;"><?php $match_update = get_post_meta($post->ID, 'meta-editor', true); echo $match_update;?></p>
 	        </div>
 
 			<div class="back-to-top">
